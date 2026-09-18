@@ -1,11 +1,8 @@
 import { component$, Slot } from "@builder.io/qwik";
-
 import { Icon } from "../Utils";
-
 import type { DeepGuard } from "@/_global/types/types";
 import type { HAttributes } from "@/_global/types/components";
 import type { PropsOf } from "@builder.io/qwik";
-
 import "./PageTitle.sass";
 
 type IconProps = Pick<PropsOf<typeof Icon>, 'type'>;

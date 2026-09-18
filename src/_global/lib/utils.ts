@@ -1,5 +1,4 @@
 import { siteDescription, siteTitle } from "./shared";
-
 import type { DocumentHead } from "@builder.io/qwik-city";
 import type { DeepGuard } from "../types/types";
 

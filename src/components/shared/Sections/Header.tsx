@@ -1,11 +1,8 @@
 import { $, component$, useComputed$, useContext } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
-
 import { provideSignalContext } from "@/_global/contexts";
 import { navOpened } from "@/_global/contexts/flags";
-
 import { Glass } from "./";
-
 import "./Header.sass";
 
 export default component$(() => {

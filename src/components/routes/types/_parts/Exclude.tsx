@@ -1,5 +1,4 @@
 import { component$ } from "@builder.io/qwik";
-
 import { Box } from "@/components/shared/Sections";
 import { Paragraph } from "@/components/shared/Typography";
 import { Highlight } from "@/components/features";

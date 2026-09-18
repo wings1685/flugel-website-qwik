@@ -1,5 +1,4 @@
 import { component$ } from "@builder.io/qwik";
-
 import { Glass, Group } from "@/components/shared/Sections";
 import { PageTitle, Paragraph } from "@/components/shared/Typography";
 

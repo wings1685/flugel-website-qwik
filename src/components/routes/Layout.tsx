@@ -1,11 +1,8 @@
 import { component$, Slot, useContextProvider, useSignal } from "@builder.io/qwik";
 import { selectedMonth, navOpened } from "@/_global/contexts/flags";
-
 import { Footer, Header, Nav } from "@/components/shared/Sections";
 import { Bg } from "@/components/shared/Utils";
-
 import type { Months } from "@/_global/lib/shared";
-
 import "@/_global/styles/global.sass";
 
 export default component$(() => {

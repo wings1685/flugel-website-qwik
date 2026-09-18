@@ -1,13 +1,10 @@
 /* eslint-disable qwik/no-use-visible-task */
 import { $, component$, useContext, useSignal, useTask$, useVisibleTask$ } from "@builder.io/qwik";
-
 import { months } from "@/_global/lib/shared";
 import { sleep } from "@/_global/lib/utils";
 import { provideSignalContext } from "@/_global/contexts";
 import { selectedMonth } from "@/_global/contexts/flags";
-
 import type { Months } from "@/_global/lib/shared";
-
 import "./Bg.sass";
 
 export default component$(() => {

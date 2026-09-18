@@ -1,7 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-
 import type { DeepGuard } from "@/_global/types/types";
-
 import "./Highlight.sass";
 
 type Props = {

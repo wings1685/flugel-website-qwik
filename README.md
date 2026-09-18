@@ -15,13 +15,16 @@
 
 ## Replaced Features
 
-- SolidStart から Qwik への翻訳（Solid JSX → Qwik JSX、関数の QRL 化）
+- SolidStart から Qwik への翻訳（Solid JSX → Qwik JSX、Solid Signal → Qwik Signal、関数の QRL 化）
+- グローバルストアから Context へ変更
+- Meta 情報用共通コンポーネントを共通関数へ変更
 - Shiki コードの色付け実行をビルド時に生成、クライアント時の実行なし
 
 ## Replaced Festival Repositories
 
 - [SolidStart 版](https://github.com/wings1685/flugel-website)
 - [SvelteKit 版](https://github.com/wings1685/flugel-website-sveltekit)
+- [Next.js 版](https://github.com/wings1685/flugel-website-next)
 
 ## Related Articles
 

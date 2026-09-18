@@ -1,8 +1,6 @@
 /* eslint-disable qwik/no-use-visible-task */
 import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
-
 import { flugel } from "@/_global/lib/shared";
-
 import { Glass, Group } from "./";
 
 export default component$(() => {

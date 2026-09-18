@@ -1,13 +1,9 @@
 /* eslint-disable qwik/no-use-visible-task */
 import { component$, useStore, useVisibleTask$ } from "@builder.io/qwik";
-
 import { fetchEntries } from "../_models/usePage";
-
 import { Glass, VerticalList } from "@/components/shared/Sections";
 import { PageTitle, Paragraph } from "@/components/shared/Typography";
-
 import type { BlogEntries } from "../_models/schema";
-
 import "./Blog.sass";
 
 export default component$(() => {
