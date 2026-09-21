@@ -1,10 +1,11 @@
 import { component$ } from "@builder.io/qwik";
-import { Archives, Environment } from "./_parts";
+import { Archives, Experiments, Environment } from "./_parts";
 
 export default component$(() => {
 	return (
 		<main>
 			<Environment />
+			<Experiments />
 			<Archives />
 		</main>
 	);
