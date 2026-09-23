@@ -13,7 +13,14 @@ export default component$(() => {
 
 	const elImage = useSignal<HTMLImageElement>();
 	const fadingMonth = useSignal<Months>();
-	const getSrcset = (month?: Months) => month ? `/images/bg/${ month }.webp 1920w, /images/bg/${ month }_sp.webp 768w` : '';
+	const imagePath = '/images/bg/';
+	const getImagePc = (month?: Months) => month ? `${imagePath}${ month }.webp` : '';
+	const getImageSp = (month?: Months) => month ? `${imagePath}${ month }_sp.webp` : '';
+	const getSrcset = (month?: Months) => {
+		if (import.meta.env.SSR || !month) return '';
+
+		return window.innerWidth <= 750 ? getImageSp(month) : getImagePc(month);
+	};
 
 	useVisibleTask$(() => {
 		const month = months[(new Date()).getMonth()];
@@ -48,9 +55,12 @@ export default component$(() => {
 
 	return (
 		<div id="bg">
-			<img ref={ el => elImage.value = el } alt="" srcset={ getSrcset(currentMonth.value) } width={ undefined } height={ undefined } />
+			<picture>
+				<source media="(max-width: 750px)" srcset={ getImageSp(currentMonth.value) } width={ undefined } height={ undefined } />
+				<img ref={ el => elImage.value = el } src={ getImagePc(currentMonth.value) } width={ undefined } height={ undefined } alt="" data-testid="bg" />
+			</picture>
 			{fadingMonth.value && (
-				<img id="selected_bg" srcset={ getSrcset(fadingMonth.value) } alt="" width={ undefined } height={ undefined } />
+				<img id="selected_bg" src={ getSrcset(fadingMonth.value) } alt="" width={ undefined } height={ undefined } />
 			)}
 		</div>
 	)
