@@ -1,6 +1,7 @@
 import * as v from "valibot";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import type { DeepGuard } from "../types/types";
+
 const MetaSchema = v.object({
 	title: v.string(),
 	description: v.optional(v.string()),
