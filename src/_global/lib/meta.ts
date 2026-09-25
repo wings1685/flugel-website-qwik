@@ -33,7 +33,7 @@ const separator = ' | ';
 const convertDirectoryArray = (dir: string) => {
 	const dirs = dir.split('/');
 
-	return dirs.map(path => path ? `${path}/` : path);
+	return dirs.filter((path, index) => path || index === 0).map(path => path ? `${path}/` : path);
 };
 const getPaths = (pageData: Props['pageData']) => Object.keys(pageData).map(path => `/${path.split('/').slice(1, -1).join('/')}`);
 const getParentDir = (dir: string) => dir.split('/').filter((d, i) => d || i === 0).slice(0, -1).join('/') || '/';
@@ -44,12 +44,13 @@ const getAvailableDirs = (paths: string[], dir: string) => {
 };
 
 export const buildMeta = (props: DeepGuard<Props>): DocumentHead => {
-	const { dir = '', meta, globData, pageData } = props;
+	const { dir = '/', meta, globData, pageData } = props;
 
 	const paths = getPaths(pageData);
 	if (dir && !paths.includes(dir)) {
 		const availableDirs = getAvailableDirs(paths, dir);
-		console.error('Undefined directory, available directories: ', availableDirs);
+		console.error('Available directories: ', availableDirs);
+		throw new Error('Undefined directory');
 	}
 	const metaData: MetaInfo = { titles: [], description: '', ogImage: '', siteTitle: '' };
 
@@ -62,12 +63,14 @@ export const buildMeta = (props: DeepGuard<Props>): DocumentHead => {
 
 		if (data.title && canOverrideTitle) metaData.titles = [ data.title, ...metaData.titles];
 		if (data.title && !metaData.siteTitle) metaData.siteTitle = data.title;
-		if (data.description) metaData.description = data.description;
-		if (data.ogImage) metaData.ogImage = data.ogImage;
+		if (data.description !== undefined) metaData.description = data.description;
+		if (data.ogImage !== undefined) metaData.ogImage = data.ogImage;
 	};
 
+	let builtPath = '';
 	Object.values(pagePaths).forEach(path => {
-		const yamlPath = `../${path}_data/meta.yaml`;
+		builtPath += path;
+		const yamlPath = `../${builtPath}_data/meta.yaml`;
 		if (!globPaths.includes(yamlPath)) return;
 
 		const data = globData[yamlPath].default;
@@ -102,7 +105,7 @@ export const buildMeta = (props: DeepGuard<Props>): DocumentHead => {
 			content: metaData.siteTitle,
 		},
 		{
-			property: 'twitter:card',
+			name: 'twitter:card',
 			content: 'summary_large_image',
 		}
 	];

@@ -17,7 +17,7 @@
 
 - SolidStart から Qwik への翻訳（Solid JSX → Qwik JSX、Solid Signal → Qwik Signal、関数の QRL 化）
 - グローバルストアから Context へ変更
-- Meta 情報用共通コンポーネントから共通関数へ変更
+- Meta 生成機構を Qwik に合わせた上で適用（Solid JSX → Qwik JSX、SiteMeta コンポーネント → siteMeta ファイル、MetaTags コンポーネント → export const head）
 - Shiki コードの色付け実行をビルド時に生成、クライアント時の実行なし
 
 ## Replaced Festival Repositories
@@ -32,6 +32,7 @@
 ## Related Articles
 
 - [同一サイトの 9 フレームワークパターンでのリプレイス祭](https://wings.hatenablog.com/entry/replaceFestival)
+- [Meta 生成機構祭](https://wings.hatenablog.com/entry/metaFestival)
 
 ## Folder Map
 
