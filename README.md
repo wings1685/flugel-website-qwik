@@ -22,6 +22,7 @@
 
 ## Replaced Festival Repositories
 
+- [Solid 2 版](https://github.com/wings1685/flugel-website-solid2)
 - [SolidStart 版](https://github.com/wings1685/flugel-website)
 - [SvelteKit 版](https://github.com/wings1685/flugel-website-sveltekit)
 - [Next.js 版](https://github.com/wings1685/flugel-website-next)
@@ -49,12 +50,16 @@ src/
 │ │ ├─ Highlight/
 │ ├─ router-head/
 │ ├─ routes/
+│ │ ├─ _data/
 │ │ ├─ _models/
 │ │ ├─ _parts/
 │ │ ├─ archives/
+│ │ │ ├─ _data/
 │ │ │ ├─ _models/
 │ │ │ ├─ _parts/
+│ │ ├─ error/
 │ │ ├─ types/
+│ │ │ ├─ _data/
 │ │ │ ├─ _models/
 │ │ │ ├─ _parts/
 │ ├─ shared/
