@@ -32,7 +32,7 @@ export default component$(() => {
 
 		currentMonth.value = fadingMonth.value;
 		fadingMonth.value = '';
-		selectedMonthContext.set('');
+		await selectedMonthContext.set$('');
 	});
 
 	useTask$(({ track }) => {

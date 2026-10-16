@@ -9,10 +9,10 @@ import "./Nav.sass";
 export default component$(() => {
 	const selectedMonthContext = provideSignalContext(useContext(selectedMonth));
 
-	const handleClick$ = $((key: Months) => {
+	const handleClick$ = $(async (key: Months) => {
 		if (selectedMonthContext.signal.value) return;
 
-		selectedMonthContext.set(key);
+		await selectedMonthContext.set$(key);
 	});
 
 	return (

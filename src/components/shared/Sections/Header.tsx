@@ -9,11 +9,11 @@ export default component$(() => {
 	const navOpenedContext = provideSignalContext(useContext(navOpened));
 	const loc = useLocation();
 
-	const handleClick$ = $((isController?: boolean) => {
+	const handleClick$ = $(async (isController?: boolean) => {
 		if (isController) {
-			navOpenedContext.set(!navOpenedContext.signal.value);
+			await navOpenedContext.set$(!navOpenedContext.signal.value);
 		} else {
-			navOpenedContext.set(false);
+			await navOpenedContext.set$(false);
 		}
 	});
 	const page = useComputed$(() => loc.url.pathname.replace(/\//g, '') || 'top');
