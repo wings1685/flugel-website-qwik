@@ -13,7 +13,7 @@ export default component$(() => {
 		<footer>
 			<Group>
 				<Glass mini>
-					<p class="copyright">{ flugel } &copy; { year.value }</p>
+					<p class="copyright monospace">{ flugel } &copy; { year.value }</p>
 				</Glass>
 			</Group>
 		</footer>
