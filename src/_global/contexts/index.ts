@@ -15,6 +15,7 @@ export const provideStoreContext = <T extends object>(context: T) => ({
 			for (const key in context) {
 				delete context[key];
 			}
+			if (Array.isArray(context) && Array.isArray(updater)) context.length = 0;
 			Object.assign(context, updater);
 		}
 	}),
