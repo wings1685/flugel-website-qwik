@@ -18,7 +18,7 @@ export default component$(() => {
 	return (
 		<nav class="wrapper">
 			{Object.entries(monthData).map(([key, name]) => (
-				<Glass key={ key } as="div" mini isDark onClick$={ () => handleClick$(key) } class="btn_nav">{ name }</Glass>
+				<Glass key={ key } as="div" mini isDark onClick$={ () => handleClick$(key) } class="btn_nav" data-testid="btn-nav" data-month={ key }>{ name }</Glass>
 			))}
 		</nav>
 	)

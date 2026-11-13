@@ -21,17 +21,17 @@ export default component$(() => {
 	return (
 		<header>
 			<input type="checkbox" checked={ navOpenedContext.signal.value } />
-			<Glass as="a" mini isDark href="/" icon="home" onClick$={ () => handleClick$() } class={ { active: page.value === 'top' } }>
+			<Glass as="a" mini isDark href="/" icon="home" onClick$={ () => handleClick$() } class={ { active: page.value === 'top' } } data-testid="btn-header-home">
 				<p>
 					<span>Home</span>
 				</p>
 			</Glass>
-			<Glass as="a" mini isDark href="/archives/" icon="folder" onClick$={ () => handleClick$() } class={ { active: page.value === 'archives' } }>
+			<Glass as="a" mini isDark href="/archives/" icon="folder" onClick$={ () => handleClick$() } class={ { active: page.value === 'archives' } } data-testid="btn-header-archives">
 				<p>
 					<span>Archives</span>
 				</p>
 			</Glass>
-			<Glass as="a" mini isDark href="/types/" icon="code" onClick$={ () => handleClick$() } class={ { active: page.value === 'types' } }>
+			<Glass as="a" mini isDark href="/types/" icon="code" onClick$={ () => handleClick$() } class={ { active: page.value === 'types' } } data-testid="btn-header-types">
 				<p>
 					<span>Types</span>
 				</p>

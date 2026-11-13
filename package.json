@@ -20,13 +20,17 @@
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
+    "preview:ssg": "npm run build && npx serve dist",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+	"test": "qwik build && npx playwright test",
+	"test:ui": "qwik build && npx playwright test --ui"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.20.0",
     "@builder.io/qwik-city": "^1.20.0",
     "@eslint/js": "^9",
+    "@playwright/test": "^1.65.0",
     "@rollup/plugin-yaml": "^5.0.0",
     "@types/node": "20.19.0",
     "eslint": "9.32.0",
