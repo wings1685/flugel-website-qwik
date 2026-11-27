@@ -1,5 +1,5 @@
 /* eslint-disable qwik/no-use-visible-task */
-import { $, component$, useContext, useSignal, useTask$, useVisibleTask$ } from "@builder.io/qwik";
+import { $, component$, useContext, useSignal, useTask$, useVisibleTask$ } from "@qwik.dev/core";
 import { months } from "@/_global/lib/shared";
 import { sleep } from "@/_global/lib/utils";
 import { provideSignalContext } from "@/_global/contexts";

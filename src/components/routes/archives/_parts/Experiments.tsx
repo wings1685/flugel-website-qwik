@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$ } from "@qwik.dev/core";
 import { experiments } from "../_models/usePage";
 import { Glass, HorizontalList, VerticalList } from "@/components/shared/Sections";
 import { PageTitle, Paragraph } from "@/components/shared/Typography";

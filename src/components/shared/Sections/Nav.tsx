@@ -1,4 +1,4 @@
-import { $, component$, useContext } from "@builder.io/qwik";
+import { $, component$, useContext } from "@qwik.dev/core";
 import { provideSignalContext } from "@/_global/contexts";
 import { selectedMonth } from "@/_global/contexts/flags";
 import { monthData } from "@/_global/lib/shared";

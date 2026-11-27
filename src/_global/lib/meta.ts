@@ -1,5 +1,5 @@
 import * as v from "valibot";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import type { DocumentHead } from "@qwik.dev/router";
 import type { DeepGuard } from "../types/types";
 
 const MetaSchema = v.object({

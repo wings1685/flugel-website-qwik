@@ -1,5 +1,5 @@
-import { $, component$, useComputed$, useContext } from "@builder.io/qwik";
-import { useLocation } from "@builder.io/qwik-city";
+import { $, component$, useComputed$, useContext } from "@qwik.dev/core";
+import { useLocation } from "@qwik.dev/router";
 import { provideSignalContext } from "@/_global/contexts";
 import { navOpened } from "@/_global/contexts/flags";
 import { Glass } from "./";

@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$ } from "@qwik.dev/core";
 import { Glass } from "@/components/shared/Sections";
 import { PageTitle, Paragraph } from "@/components/shared/Typography";
 

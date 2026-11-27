@@ -1,5 +1,5 @@
 /* eslint-disable qwik/no-use-visible-task */
-import { component$, useStore, useVisibleTask$ } from "@builder.io/qwik";
+import { component$, useStore, useVisibleTask$ } from "@qwik.dev/core";
 import { fetchEntries } from "../_models/usePage";
 import { Glass, VerticalList } from "@/components/shared/Sections";
 import { PageTitle, Paragraph } from "@/components/shared/Typography";

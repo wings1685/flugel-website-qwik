@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$ } from "@qwik.dev/core";
 import type { DeepGuard } from "@/_global/types/types";
 import "./Highlight.sass";
 

@@ -1,4 +1,4 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { component$, Slot } from "@qwik.dev/core";
 import Layout from "@/components/routes/Layout";
 import "@/_global/styles/global.sass";
 

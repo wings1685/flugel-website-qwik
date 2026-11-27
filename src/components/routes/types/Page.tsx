@@ -1,4 +1,4 @@
-import { component$, Resource, useResource$ } from "@builder.io/qwik";
+import { component$, Resource, useResource$ } from "@qwik.dev/core";
 import { codes as codeDeepGuard } from "./_models/codeDeepGuard";
 import { codes as codeProps } from "./_models/codeProps";
 import { codes as codeExclude } from "./_models/codeExclude";

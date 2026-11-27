@@ -1,4 +1,4 @@
-import { component$, Slot, useContextProvider, useSignal } from "@builder.io/qwik";
+import { component$, Slot, useContextProvider, useSignal } from "@qwik.dev/core";
 import { selectedMonth, navOpened } from "@/_global/contexts/flags";
 import { Footer, Header, Nav } from "@/components/shared/Sections";
 import { Bg } from "@/components/shared/Utils";

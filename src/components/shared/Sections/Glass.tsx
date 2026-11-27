@@ -1,8 +1,8 @@
-import { component$, Slot } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { component$, Slot } from "@qwik.dev/core";
+import { Link } from "@qwik.dev/router";
 import { Section } from "./";
 import { Icon } from "../Utils";
-import type { PropsOf } from "@builder.io/qwik";
+import type { PropsOf } from "@qwik.dev/core";
 import type { DeepGuard } from "@/_global/types/types";
 import type { AsDiv, AsSection, AsLink } from "@/_global/types/components";
 import "./Glass.sass";

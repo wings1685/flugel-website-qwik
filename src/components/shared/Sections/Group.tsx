@@ -1,4 +1,4 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { component$, Slot } from "@qwik.dev/core";
 import type { Directions, DivAttributes, Sizes } from "@/_global/types/components"
 import type { DeepGuard } from "@/_global/types/types";
 import "./Group.sass";
